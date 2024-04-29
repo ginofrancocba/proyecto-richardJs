@@ -84,7 +84,7 @@
         </section>
         <section className='section5'>
             <div class="slider-container">
-                <h2 className='slider-titulo'>Galerie d'images</h2>
+                <h1 className='slider-h1'>Galerie d'images</h1>
                 <div class="glider-contain">
                     <div class="glider">
                         <div>
@@ -142,40 +142,39 @@
                 </p>
                 <img className="img-about" src="assets/images/img-about.jpeg" alt="imagen-richard"></img>
             </div>
-            {/* Botón de WhatsApp */}
-            <div className="whatsapp-button" onClick={openWhatsAppChat}>
-                <img src="assets/images/icon-whatsapp.png" alt="WhatsApp" />
-            </div>
+            <a href="https://wa.me/+33664424050" target="_blank" class="whatsapp-button">
+                <img class="whatsapp-img" src="assets/images/icon-whatsapp.png" alt="WhatsApp" />
+            </a>
         </section>
         <div className="button2">
             <Link to="/Seances">Seances Gratis...</Link>
         </div>
     </main>
     <footer>
-        <div class="footer">
-            <div class="section-footer">
+        <section class="section-footer">
+            <div class="div-footer">
                 <div class="footer-column1">
                     <p>Paris-France</p>
                     <p>Whatsapp +33 6 64 42 40 50</p>
                     <p>contact@numerologie-tarot.com</p>
                 </div>
-                <div class="footer-column2">
-                    <div class="social-media">
+                <div class="footer-column2">                 
                         <a href="https://www.facebook.com/richard.albacete/about" target="_blank"
                             rel="noopener noreferrer">Facebook</a>
-                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">Tik Tok</a>
+                        <a href="https://www.tiktok.com/" target="_blank" 
+                            rel="noopener noreferrer">Tik Tok</a>
                         <a href="https://www.instagram.com/richard_albacete/" target="_blank"
                             rel="noopener noreferrer">Instagram</a>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                </div>
+                        <a href="https://www.youtube.com/" target="_blank" 
+                            rel="noopener noreferrer">YouTube</a>                    
+                </div> <br><br>
             </div>
             <div class="section-footer-p">
                 <div class="footer-copyright">
                     <p>Copyright © studio23.es All rights reserved.</p>
                 </div>
             </div>
-        </div>
+        </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/glider-js/glider.min.js"></script>
     <script src="assets/scripts/script.js"></script> <!-- Tus scripts de JavaScript puro -->
