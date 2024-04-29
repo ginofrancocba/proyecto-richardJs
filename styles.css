@@ -1,0 +1,595 @@
+:root {
+    font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #fffbfb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  } 
+  
+  body, html {
+    margin: 0 auto;
+    max-width: 55vw;
+    padding: 0vw;
+  }
+  
+  .section1,
+  .section2-form,
+  .section3,
+  .section4,
+  .section5,
+  .section6 {
+    width: 100%;
+    padding: 1rem  0,5rem;
+  }
+  
+  .logo-navbar, 
+  .img-header, 
+  .button-container, 
+  .img-libro, 
+  .img-about {
+    max-width: 90%;
+    width: 70%;
+    height: auto;
+    padding: 1em;
+  }
+  
+  .img-header {
+    width: 80vw;
+    padding: 0; 
+  }
+  
+  .relative-container, 
+  .button-container, 
+  .form-container {
+    position: relative;
+  }
+  
+  .button-container {
+    width: 10rem;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 88%;
+    left: 80%;
+    padding: 0.9rem;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    border: 2px #000;
+    box-shadow: #a1a1da 0px 0px 10px, #6a6ad5 0px 1px 6px;
+  }
+  
+  .button-container:hover, .button2:hover {
+    background-color:  #a5a6b1;
+    border-color: #646cff;
+    box-shadow: #646cff 0px 0px 4px, #7a7b89 0px 4px 11px;
+    border: 1px solid #74759b;
+    transform: scale(1);
+    transition: 0.6s;
+  }
+  
+  .navbar {
+    width: 21%;
+    height: 100vh;
+    position: fixed;
+    z-index: 2; 
+    background-color: white;
+    left:0;
+    top:0;
+  }
+  
+  .navbar ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 10%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar ul li a {
+      padding: 5%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: black;
+      display: block;
+      transition: 0.5s;
+  }
+  
+  .navbar ul li a:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+  }
+  
+  a {
+    font-weight: 500 ;
+    color: #545459;
+    text-decoration: inherit;
+  }
+  
+  a:hover {
+    color: #535bf2;
+  }
+  
+  .redes-sociales {
+    display: inline-flex;
+    width: 21vw; /* Ancho total de las redes sociales */
+    margin: 6%; 
+  }
+  
+  .redes-sociales img {
+    width: 40%; /* Tamaño de cada ícono de red social */
+    margin-right: 10px; /* Espacio entre cada ícono de red social */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow; /* Optimiza las propiedades que serán animadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra inicial suave */
+  }
+  
+  .redes-sociales img:hover {
+        transform: scale(1.5) rotate(20deg); /* Escala ligeramente y rota */
+        box-shadow: 0 5px 15px rgba(50, 50, 50, 0.3); /* Sombra más pronunciada para efecto elevado */
+    }
+  
+  .section1{
+    width: 70vw;
+  }
+  
+  .section2-form {
+    display: inline-flex;
+    width: 75vw;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  
+  .p1-home {
+    display: flex;
+    width: 50vw;
+    font-size: 1.2em;
+    line-height: 1.3;
+    color: #000;
+    margin: 0% 2% 0% 0%;
+    padding: 5% 5% 0% 0%;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input, textarea {
+    width: 80%; /* Adaptativo al tamaño del contenedor */
+    margin: 10px;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .form-home {
+    width: 20vw;
+    margin:0% 0% 0% 0%;
+    padding: 0%;
+  }
+  
+  .mi-formulario {
+    width: 22vw;
+    margin: 0% 0% 0% 0%; 
+  }
+  
+  .mi-formulario ul {
+    width: 22vw;
+    padding: 0; /* Elimina el relleno predeterminado */
+    background-color: white; 
+  }
+  
+  .mi-formulario li {
+    width: 22vw;
+    margin-bottom: 0%; /* Espacio entre elementos */
+    list-style: none;
+  }
+  
+  .mi-formulario input[type="text"],
+  .mi-formulario input[type="email"],
+  .mi-formulario textarea {
+    width: 22vw;
+    padding:2% 2% 2% 2%;
+    margin: 3% 0% 0% 0%;
+    margin-bottom: 0%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color:#000; 
+  }
+  
+  .mi-formulario textarea {
+    height: 8vh; /* Altura del área de texto */
+  }
+  
+  .mi-formulario input[type="submit"] {
+    width: 22vw;
+    background-color: #8184be;
+    color: white;
+    border: none;
+    padding: 3% 5% 5% 5%;
+    margin: 1% 0% 0% 0%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .mi-formulario input[type="submit"]:hover {
+    background-color:  #868cf8;
+    border-color: #646cff;
+    box-shadow: #646cff 0px 0px 4px, #7a7b89 0px 4px 11px;
+    border: 1px solid #74759b;
+  }
+
+  .p2-home {
+    display: inline-flex;
+    line-height: 1%;
+  }
+  
+  .section3 {
+    width: 70vw;
+  }
+  
+  .p1-numerologie {
+    display: inline-flex;
+    width: 50vw;
+    font-size: 1.4em;
+    line-height: 1.1;
+    color: #000;
+    text-align: left;
+    justify-content: left;
+    padding: 3% 10% 3% 3%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    width: 40vw;
+    line-height: 1.1;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    border-bottom-style: solid ;
+    margin: 3% 2% 7% 5%;
+    padding: 0% 0% 2% 0%;
+  }
+  
+  .img-curso, 
+  .img-libro {
+    display: inline-flex;
+    width: 30%;
+    margin: 0% 0% 1%;
+    padding: 5%; 
+  }
+  
+  .section4 {
+    display: inline-flex;
+    width: 60vw;
+  }
+  
+  .p4 {
+    display: inline-flex;
+    width: 55vw;
+    height: 80vh;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #000;
+    text-align: left;
+    justify-content: left;
+    padding: 0% 0% 0% 3%;
+  }
+   
+  .p-section4{
+    width: 70%;
+    height: 70%;
+  } 
+  
+  .img-about {
+    width: 30vw;
+    height: 70vh;
+    padding: 3% 0% 3% 10%; 
+  }
+  
+  .section5 {
+    display: flex;
+    width: 70vw;
+  }
+  
+  .slider-container {
+    width: 40vw;
+    margin: 1% 1% 1% 0%;
+    padding: 0% 0% 6% 0%;
+  }
+  
+  .paragraph-container {
+    width: 40vw;
+    height: 60vh;
+    font: 1em sans-serif;
+    line-height: 1.2;
+    margin: 6% 0% 0% -1%;
+    padding: 8% 0% 0% 1%; /* Ajusta el espacio interior según sea necesario */
+    color: #000;
+  }
+  
+  .p-paragraph {
+    width: 30vw;
+  }
+  
+  .limit-text {
+    white-space: nowrap; /* Evita que el texto se envuelva */
+  }
+  
+  .img-slider1,
+  .img-slider2 {
+    display: inline-flex;
+    width: 30vw; 
+    height: 50vh;
+    margin: 0% 0% 1%;
+    padding: 5%;
+  }
+  
+  .slider-titulo {
+    font-size: 2.5em;
+    width: 50vw;
+    line-height: 1.1;
+    color: #000;
+    border-bottom-style: solid ;
+    margin: 5% 0% 6% 12%;
+    padding: 0% 0% 2% 0%;
+  }
+  
+  .section6 {
+    width: 70vw;
+  }
+  
+  /* Estilos para el botón de WhatsApp */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    cursor: pointer;
+  }
+  
+  .whatsapp-button img {
+    width: 6vw; /* Ajusta el tamaño del icono de WhatsApp según sea necesario */
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  .button2 {
+    width: 10rem ;
+    margin: -8% 0% 0% 20%;
+    font-size: 1.3rem;
+    padding: 0.8rem;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    border: 2px #000;
+    box-shadow: #a1a1da 0px 0px 10px, #6a6ad5 0px 1px 6px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95.5%;
+    color: white;
+    background-color: #000;
+    padding: 20px;
+  }
+  
+  .section-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .footer-column1,
+  .footer-column2 {
+    flex: 1; /* Hace que ambas columnas ocupen el mismo espacio */
+    padding: 3% 0% 0% 10%; /* Espacio interno */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total */
+    width: 40vw;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+  
+  .section-footer-p {
+    display: flex;
+    width: 70vw;
+  }
+  
+  .footer-column1 {
+    width: 40vw;
+  }
+  
+  .footer-column2 {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-copyright {
+    width: 52vw;
+    height: 10vh;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  
+  .vid-cont {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .vid-numerologie {
+    width: 60vw;
+  }
+  
+  h2 {
+    font-size: 2em;
+    width: 70vw;
+    line-height: 1.1;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .p1-numerologie {
+    display: inline-flex;
+    width: 90%;
+    font-size: 1.1em;
+    line-height: 1.1;
+    color: #000;
+    text-align: left;
+    justify-content: left;
+    padding: 0% 0% 0% 0%;
+  }
+  
+  .p2-numerologie {
+    display: flex;
+    width: 85%;
+    font-size: 1.4em;
+    line-height: 1.1;
+    color: #000;
+    justify-content:space-around;
+    padding: 1% 1% 1% 1%;
+  }
+  
+  .p3-numerologie {
+    display: flex;
+    width: 70%;
+    font-size: 1.2em;
+    line-height: 2;
+    color: #000;
+    justify-content: space-around;
+    margin: 0% 1% 1% 3%;
+    padding: 1% 0% 1% 5%;
+  }
+  
+  .img1-numerologie {
+    width: 40%;
+    padding: 5% 15% 3% 10%; 
+  }
+  
+  .p4-numerologie {
+    display: flex;
+    width: 70%;
+    font-size: 1.2em;
+    line-height: 2;
+    color: #000;
+    justify-content: space-around;
+    margin: 0% 1% 1% 3%;
+    padding: 1% 0% 1% 5%;
+  }
+  
+  .section2-seance {
+    display:inline-flex;
+    width: 70vw;
+  }
+  
+  .h2-seances {
+    margin-left: 4%;
+  }
+  
+  .img-seances1 {
+    display: inline-flex;
+    width: 30vw;
+    height: 75vh;
+    margin: 1% 10% 0% 0%;
+    padding:1% 1% 0% 10%;
+  }
+  
+  .p1-seances {
+    display: inline-flex;
+    width: 30vw;
+    font-size: 1.3em;
+    line-height: 1.1;
+    color: #000;
+    margin: 0% 0% 0% 0%;
+    padding:1% 0% 0% 0%;
+  }
+  
+  @media (max-width: 768px) {
+
+    /* Ajustes para el logo en la barra de navegación */
+    .logo-navbar {
+      width: 70vw;  /* Ajusta el logo a un 50% del ancho de la pantalla */
+      height: auto; /* Mantiene la proporción del logo */
+      margin: 20px auto; /* Margen superior e inferior para separación y centrado horizontal */
+      display: block; /* Asegura que el logo sea un bloque para permitir el margin auto */
+    }
+  
+    /* Continuación de ajustes previos */
+    .navbar {
+      width: 70vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    .img-header, .img-curso, .img-libro, .img-about {
+      width: 70%; /* Ajusta todas las imágenes para que tomen el 100% del ancho disponible */
+      padding: 0;
+      margin-bottom: 10px;
+    }
+  
+    .button-container {
+      position: static;
+      width: auto;
+      margin: 20px auto;
+      left: auto;
+      right: auto;
+      transform: none;
+    }
+  
+    .section1, .section-form, .section3, .section4, .section5, .section6 {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    button, .navbar ul li a, .p1-home, .p2-home, .p4-home, h1, .p-paragraph {
+      width: 90%;
+      text-align: center;
+    }
+  
+    .whatsapp-button img {
+      width: 20px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  
