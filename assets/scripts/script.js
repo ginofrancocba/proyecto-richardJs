@@ -1,48 +1,54 @@
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const path = this.getAttribute('href').replace('.html', '');
-        
-        fetch(`${path}.html`)
-            .then(response => response.text())
+document.addEventListener('DOMContentLoaded', function() {
+    // Manejo de clics en enlaces para cargar contenido dinámicamente
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const path = this.getAttribute('href');
+            fetch(path)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
             .then(html => {
                 document.querySelector('main').innerHTML = html;
             })
-            .catch(error => console.error('Error loading the page: ', error));
+            .catch(error => {
+                console.error('Error loading the page: ', error);
+                alert('Failed to load page: ' + error.message);  // Informar al usuario
+            });
+        });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Manejo de formulario
     const form = document.querySelector('.mi-formulario');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const formData = new FormData(form);
-        // Implementar lógica para enviar los datos del formulario, por ejemplo, usando fetch
         console.log('Form submitted', Object.fromEntries(formData.entries()));
-        // Aquí podrías añadir la integración con emailjs u otra API de envío de correos
+        // Aquí podrías implementar el envío de datos por AJAX o usando una API como emailjs
     });
 
-    // Código para manejar la carga dinámica de páginas si decides implementarlo
-});
-
-new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-    dots: '.dots',
-    arrows: {
-        prev: '.glider-prev',
-        next: '.glider-next'
-    },
-    autoplay: 3000,  // Este es el intervalo de autoplay en milisegundos
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-
+    // Inicialización de Glider.js
+    new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+        },
+        autoplay: 3000,  // Autoplay para todas las vistas
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        }
-    ]
+        ]
+    });
 });

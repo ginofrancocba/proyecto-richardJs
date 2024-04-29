@@ -260,17 +260,7 @@
     margin: 0% 0% 1%;
     padding: 5%; 
   }
-  
-  .p1-numerologie {
-    display: inline-flex;
-    width: 50vw;
-    font-size: 1.4em;
-    line-height: 1.1;
-    color: #000;
-    text-align: left;
-    justify-content: left;
-    padding: 3% 10% 3% 3%;
-  }
+
   
   h1 {
     font-size: 2.5em;
@@ -316,11 +306,29 @@
     display: flex;
     width: 70vw;
   }
+
+  .slider-titulo {
+    font-size: 2.5em;
+    width: 40vw;
+    line-height: 1.1;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    border-bottom-style: 1px solid;
+    margin: 3% 2% 7% 5%;
+    padding: 0% 0% 2% 0%;
+  }
   
   .slider-container {
-    width: 40vw;
-    margin: 1% 1% 1% 0%;
-    padding: 0% 0% 6% 0%;
+    width: 35vw;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+
+  .img-slider1 {
+    display: inline-flex;
+    margin: 0% 0% 0% 0%;
+    padding: 0%;
   }
   
   .paragraph-container {
@@ -340,26 +348,7 @@
   .limit-text {
     white-space: nowrap; /* Evita que el texto se envuelva */
   }
-  
-  .img-slider1,
-  .img-slider2 {
-    display: inline-flex;
-    width: 30vw; 
-    height: 50vh;
-    margin: 0% 0% 1%;
-    padding: 5%;
-  }
-  
-  .slider-titulo {
-    font-size: 2.5em;
-    width: 50vw;
-    line-height: 1.1;
-    color: #000;
-    border-bottom-style: solid ;
-    margin: 5% 0% 6% 12%;
-    padding: 0% 0% 2% 0%;
-  }
-  
+
   .section6 {
     width: 70vw;
   }
@@ -464,6 +453,17 @@
   
   .vid-numerologie {
     width: 60vw;
+  }
+  
+  .p1-numerologie {
+    display: inline-flex;
+    width: 50vw;
+    font-size: 1.4em;
+    line-height: 1.1;
+    color: #000;
+    text-align: left;
+    justify-content: left;
+    padding: 3% 10% 3% 3%;
   }
   
   h2 {
