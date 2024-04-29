@@ -5,7 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/icon-richard.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RichAlb</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de vincular tu CSS aquí -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js/glider.min.css">
 </head>
 <body>
     <header>
@@ -76,11 +77,28 @@
                     <img className="image-libro" src="assets/images/img-libro.JPG" alt="imagen-libro" />
                 </a>
             </div>
-        </section>
-        
+        </section>   
           <section className='section5'>
-            <div className="slider-container">
-              <CustomSlider />
+            <div class="slider-container">
+                <div class="glider-contain">
+                    <div class="glider">
+                    <div>
+                <img className="img-slider1" src="assets/images/img-slider1.jpeg" alt="imagen-slider1" />
+              </div>
+              <div>
+                <img className="img-slider1" src="assets/images/img-slider2.jpeg" alt="imagen-slider2" />
+              </div>
+              <div>
+                <img className="img-slider1" src="assets/images/img-slider3.jpeg" alt="imagen-slider3" />
+              </div>
+              <div>
+                <img className="img-slider1" src="assets/images/img-slider4.jpeg" alt="imagen-slider4" />
+              </div>
+              </div>
+              <button role="button" class="glider-prev">«</button>
+              <button role="button" class="glider-next">»</button>
+              <div role="tablist" class="dots"></div>
+                    </div>
             </div>
             <div className="paragraph-container">
               <p className='p-paragraph'>Richard Albacete a pris la décision audacieuse de se consacrer entièrement à l'enseignement du Tarot et de la Numérologie, rendant ces disciplines anciennes
@@ -144,7 +162,7 @@
             </div>
         </div>
     </footer>
-    
-    <script src="script.js"></script> <!-- Tus scripts de JavaScript puro -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js/glider.min.js"></script>
+    <script src="assets/scripts/script.js"></script> <!-- Tus scripts de JavaScript puro -->
 </body>
 </html>

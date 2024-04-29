@@ -24,3 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Código para manejar la carga dinámica de páginas si decides implementarlo
 });
+
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+    },
+    autoplay: 3000,  // Este es el intervalo de autoplay en milisegundos
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+            }
+        }
+    ]
+});
