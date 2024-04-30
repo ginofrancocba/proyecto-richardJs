@@ -540,8 +540,18 @@
   
   @media (max-width: 768px) {
 
+    main {
+        width: 100vw;
+        margin-top: 30vh; /* Desplaza el contenido principal para no solaparse con el navbar */
+        padding: 15px 0 0 0;
+     
+    }
+
     .hamburger {
         display: block; /* Muestra el botón de hamburguesa */
+        position: absolute;
+        top: 15px;
+        right: -140px;
     }
 
     #navbar-links {
@@ -571,19 +581,77 @@
     .logo-navbar {
       width: 70vw;  /* Ajusta el logo a un 50% del ancho de la pantalla */
       height: auto; /* Mantiene la proporción del logo */
-      margin: 20px auto; /* Margen superior e inferior para separación y centrado horizontal */
+      margin: 10% 20% 0% 10%; /* Margen superior e inferior para separación y centrado horizontal */
       display: block; /* Asegura que el logo sea un bloque para permitir el margin auto */
     }
   
-    /* Continuación de ajustes previos */
     .navbar {
-      width: 70vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 0;
+        width: 80%;
+        height: 25vh; /* Ajusta la altura del navbar al 30% de la vista vertical */
+        position: fixed;
+        z-index: 1000; /* Asegura que el navbar esté encima del contenido */
+        background-color: white;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar ul li a {
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px; /* Ajusta el tamaño de fuente para mejor legibilidad */
+    }
+
+    .redes-sociales {
+        display: flex;          /* Flexbox para un fácil centrado */
+        justify-content: center;/* Centra los elementos horizontalmente */
+        align-items: center;    /* Centra los elementos verticalmente */
+        width: 90%;            /* Toma el ancho completo para mejor alineación */
+        margin-top: 30vh;       /* Inicia justo después de la navbar */
+        padding: 10px 0;        /* Espacio superior e inferior para separación visual */
+        margin: 0% 1% -65% -80%; 
+    }
+
+    .redes-sociales img {
+        width: 30%;             /* Tamaño reducido de los iconos para adaptarse a la vista móvil */
+    }
+
+    .section1, .section2-form, .section3, .section4, .section5, .section6 {
+        width: 110%;
+        padding: 5px;
+    }
+
+    .img-header, .img-libro, .img-about {
+        width: 100vw; /* Adapta todas las imágenes al nuevo ancho */
+    }
+
+    .button-container, .form-home, .slider-container {
+        width: auto;
+        margin-top: 20px;
+        padding: 0 5%;
+    }
+
+    .whatsapp-button img {
+        width: 15%; /* Reduce el tamaño del ícono de WhatsApp adecuadamente */
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .form-home { /* Oculta el formulario en dispositivos móviles */
+        display: none;
+    }
+
     .img-header, .img-curso, .img-libro, .img-about {
       width: 70%; /* Ajusta todas las imágenes para que tomen el 100% del ancho disponible */
       padding: 0;
