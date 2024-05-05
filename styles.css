@@ -577,6 +577,10 @@
         color: black;
     }
 
+    glider.prev, glider-next {
+        display: none;
+    }
+
     /* Ajustes para el logo en la barra de navegación */
     .logo-navbar {
       width: 70vw;  /* Ajusta el logo a un 50% del ancho de la pantalla */
@@ -587,9 +591,9 @@
   
     .navbar {
         width: 80%;
-        height: 25vh; /* Ajusta la altura del navbar al 30% de la vista vertical */
+        height: 25vh;
         position: fixed;
-        z-index: 1000; /* Asegura que el navbar esté encima del contenido */
+        z-index: 1000;
         background-color: white;
         top: 0;
         left: 0;
@@ -613,17 +617,17 @@
     }
 
     .redes-sociales {
-        display: flex;          /* Flexbox para un fácil centrado */
-        justify-content: center;/* Centra los elementos horizontalmente */
-        align-items: center;    /* Centra los elementos verticalmente */
-        width: 90%;            /* Toma el ancho completo para mejor alineación */
-        margin-top: 30vh;       /* Inicia justo después de la navbar */
-        padding: 10px 0;        /* Espacio superior e inferior para separación visual */
+        display: flex;         
+        justify-content: center;
+        align-items: center;    
+        width: 90%;           
+        margin-top: 30vh;       
+        padding: 10px 0;        
         margin: 0% 1% -65% -80%; 
     }
 
     .redes-sociales img {
-        width: 30%;             /* Tamaño reducido de los iconos para adaptarse a la vista móvil */
+        width: 30%;             
     }
 
     .section1, .section2-form, .section3, .section4, .section5, .section6 {
@@ -632,7 +636,7 @@
     }
 
     .img-header, .img-libro, .img-about {
-        width: 100vw; /* Adapta todas las imágenes al nuevo ancho */
+        width: 110vw; /* Adapta todas las imágenes al nuevo ancho */
     }
 
     .button-container, .form-home, .slider-container {
